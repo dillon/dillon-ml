@@ -1,0 +1,376 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Dillon Petito</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    html {
+      font-family: Arial, Helvetica, sans-serif;
+      /* font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif; */
+      font-size: .9rem;
+      background-color: silver;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 1px;
+      cursor: pointer;
+    }
+
+    table tbody {
+      border-spacing: 2px;
+      overflow: scroll;
+      background-image: url('images/manga.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    table thead {
+      position: sticky;
+      top: 0;
+    }
+
+    table th {
+      color: #666;
+      background-color: rgba(200, 200, 200, .5);
+      /* text-align: left; */
+    }
+
+    table td {
+      vertical-align: top;
+      padding: 5px;
+      border: 1px solid #666;
+    }
+
+    table th {
+      vertical-align: top;
+      padding: 5px;
+      border: 1px solid #666;
+    }
+
+    table tr {
+      background-color: rgba(240, 240, 240, .92);
+      transition: 100ms;
+    }
+
+    table tr:hover {
+      background-color: rgba(220, 220, 220, .94);
+      transition: 100ms;
+    }
+
+    table tr {
+      border: 1px solid #666;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="bgImage"></div>
+  <script>
+    const projects =
+      [
+        {
+          show: false,
+          date: "2018.03.29",
+          name: "Javascript Calculator",
+          description: "A calculator built with jQuery",
+          tags: "jQuery, javascript, web, freecodecamp",
+          link: "https://codepen.io/dpett122/pen/yKzovY"
+        },
+        {
+          show: true,
+          date: "2018.04.20",
+          name: "Masternode Status",
+          description: "MacOS Status Bar app that displays the amount of XMX in a Xuma wallet.",
+          tags: "Swift, macOS",
+          link: "https://github.com/dillon/Masternode-Status"
+        },
+        {
+          show: false,
+          date: "2018.06.01",
+          name: "Drum Machine",
+          description: "A web-based drum machine built with react and scss",
+          tags: "react, scss, web, freecodecamp",
+          link: "https://codepen.io/dpett122/pen/Xqyeov?editors=0110"
+        },
+        {
+          show: true,
+          date: "2018.06.12",
+          name: "Markdown Previewer",
+          description: "A web-based text editor with a built-in markdown previewer, made with React",
+          tags: "react, web, freecodecamp",
+          link: "https://github.com/dillon/Markdown-Previewer"
+        },
+        {
+          show: true,
+          date: "2018.07.07",
+          name: "JPG Recovery",
+          description: "A command line program written in C that recovers .jpg files from a corrupted memory card.",
+          tags: "C, cs50",
+          link: "https://github.com/dillon/cs50/tree/master/pset4/recover"
+        },
+        {
+          show: false,
+          date: "2018.07.12",
+          name: "Spell Checker",
+          description: "A command line program written in C that compares a text file that compares large text files against a dictionary to find mispelled words.",
+          tags: "C, cs50",
+          link: "https://github.com/dillon/cs50/blob/master/pset5/speller/README.md"
+        },
+        {
+          show: true,
+          date: "2018.07.17",
+          name: "Password Cracker",
+          description: "A command line program that cracks passwords hashed with C's DES-based crypt function. Originally written in C and later ported to python.",
+          tags: "C, Python, cs50",
+          link: "https://github.com/dillon/cs50/tree/master/pset2/crack"
+        },
+        {
+          show: false,
+          date: "2018.07.20",
+          name: "Similarities Checker",
+          description: "A Flask app that lets user upload two files and see the similarities between the files (by substring of n length, by sentence, or by line).",
+          tags: "flask, jinja, python, javascript, cs50",
+          link: "https://github.com/dillon/cs50/tree/master/pset6/similarities"
+        },
+        {
+          show: true,
+          date: "2018.07.23",
+          name: "Mock Exchange",
+          description: "A mock stock exchange in the form of a Flask app (utilizing an SQLite database) that lets users register and manage their account, get stock quotes, and \"buy\" and \"sell\" stocks at their current market price.",
+          tags: "flask, sqlite, jinja, python, javascript, jquery, web, cs50",
+          link: "https://github.com/dillon/cs50/tree/master/pset7/finance"
+        },
+        {
+          show: true,
+          date: "2018.07.30",
+          name: "Local News Map",
+          description: "A Flask web app utilizing an SQLite database and Google Maps API that allows you to visualize local news all over the country.",
+          tags: "flask, sqlite, geolocation, python, javascript, jquery, web, cs50",
+          link: "https://github.com/dillon/cs50/tree/master/pset8/mashup"
+        },
+        {
+          show: false,
+          date: "2018.08.03",
+          name: "Todo List",
+          description: "A basic todo app made with vanilla javascript.",
+          tags: "javascript, web, cs50-mobile",
+          link: "https://github.com/dillon/cs50-mobile/tree/master/project0"
+        },
+        {
+          show: false,
+          date: "2018.08.07",
+          name: "Pomodoro Timer",
+          description: "A mobile app to help you follow the pomodoro technique.",
+          tags: "react-native, react-naviation, javascript, mobile, cs50-mobile",
+          link: "https://github.com/dillon/cs50-mobile/tree/master/project1"
+        },
+        {
+          show: true,
+          date: "2018.08.13",
+          name: "Movie & TV Guide",
+          description: "A mobile app to search for information about movies and TV shows.",
+          tags: "react-native, axios, react-naviation, javascript, mobile, cs50-mobile",
+          link: "https://github.com/dillon/cs50-mobile/tree/master/project2"
+        },
+        {
+          show: true,
+          date: "2018.08.23",
+          name: "Crypto Dashboard",
+          description: "A mobile app that displays market info and news for the top 200 cryptocurrencies by market cap.",
+          tags: "react-native, redux, javascript, mobile, cs50",
+          link: "https://github.com/dillon/crypto-dashboard"
+        },
+        {
+          show: false,
+          date: "2018.09.18",
+          name: "d3 Bar Chart",
+          description: "US GDP data mapped with d3",
+          tags: "d3, javascript, web, data-visualization, freecodecamp",
+          link: "https://codepen.io/dpett122/full/jvexPm/"
+        },
+        {
+          show: false,
+          date: "2018.09.18",
+          name: "d3 Scatterplot",
+          description: "Professional cycling data mapped with d3",
+          tags: "d3, javascript, web, data-visualization, freecodecamp",
+          link: "https://codepen.io/dpett122/full/ZMqPLp/"
+        },
+        {
+          show: false,
+          date: "2018.09.18",
+          name: "d3 Heat Map",
+          description: "Monthly Global Land-Surface Temp data mapped with d3",
+          tags: "d3, javascript, web, data-visualization, freecodecamp",
+          link: "https://codepen.io/dpett122/full/OoazgM/"
+        },
+        {
+          show: true,
+          date: "2018.09.20",
+          name: "d3 Choropleth Map",
+          description: "US Education data mapped with d3",
+          tags: "d3, javascript, web, data-visualization, freecodecamp",
+          link: "https://codepen.io/dpett122/full/aaQaQX/"
+        },
+        {
+          show: true,
+          date: "2018.09.21",
+          name: "d3 Treemap Diagram",
+          description: "Kickstarter top pledges mapped with d3 and the Kickstarter API",
+          tags: "d3, javascript, web, data-visualization, freecodecamp",
+          link: "https://codepen.io/dpett122/full/RYvXLq/"
+        },
+        {
+          show: false,
+          date: "2018.09.23",
+          name: "Timestamp API",
+          description: "API microservice for retrieving and parsing date/time",
+          tags: "API, backend, nodejs, express, javascript, freecodecamp",
+          link: "https://api-project-timestamp.glitch.me"
+        },
+        {
+          show: false,
+          date: "2018.09.23",
+          name: "Request Header Parser API",
+          description: "API microservice that parses request headers",
+          tags: "API, backend, nodejs, express, javascript, freecodecamp",
+          link: "https://hot-marble.glitch.me"
+        },
+        {
+          show: true,
+          date: "2018.09.24",
+          name: "URL Shortening API",
+          description: "API microservice that creates shortened URLs.",
+          tags: "API, backend, mongodb, nodejs, express, javascript, freecodecamp",
+          link: "https://fcc-url-shorterner-microservice.glitch.me/"
+        },
+        {
+          show: false,
+          date: "2018.09.25",
+          name: "Exercise Tracker",
+          description: "Create an account and keep track of your exercises.",
+          tags: "API, backend, mongodb, nodejs, express, javascript, freecodecamp",
+          link: "https://fcc-exercise-tracker-dpett.glitch.me/"
+        },
+        {
+          show: false,
+          date: "2018.09.25",
+          name: "File Metadata Microservice",
+          description: "Microservice that shows metadata of files uploaded",
+          tags: "API, backend, nodejs, express, javascript, freecodecamp",
+          link: "https://fcc-file-metadata-service-dpett.glitch.me"
+        },
+        {
+          show: false,
+          date: "2018.09.30",
+          name: "Metric/Imperial Converter",
+          description: "API microservice for converting metric/imperial units",
+          tags: "API, backend, nodejs, express, security, helmetjs, javascript, freecodecamp",
+          link: "https://fcc-metric-imperial-converter.glitch.me/"
+        },
+        {
+          show: true,
+          date: "2018.10.02",
+          name: "Issue Tracker",
+          description: "API microservice for creating and managing project issues.",
+          tags: "API, mongodb, nodejs, express, backend, security, helmetjs, javascript, freecodecamp",
+          link: "https://fcc-issue-tracker-2.glitch.me/"
+        },
+        {
+          show: false,
+          date: "2018.10.09",
+          name: "Personal Library",
+          description: "Forum for keeping track of and commenting on book titles.",
+          tags: "API, mongodb, nodejs, express, backend, security, helmetjs, javascript, freecodecamp",
+          link: "https://fcc-personal-library-dpett.glitch.me/"
+        },
+        {
+          show: false,
+          date: "2018.10.10",
+          name: "Stock Price Checker",
+          description: "API microservice for checking stock prices and \"liking\" stocks. Headless browser functional testing with Chai and Zombie",
+          tags: "API, mongodb, testing, chai, nodejs, express, backend, security, helmetjs, javascript, freecodecamp",
+          link: "https://fcc-stock-price-checker-dpett.glitch.me/"
+        },
+        {
+          show: true,
+          date: "2018.10.12",
+          name: "Anonymous Message Board",
+          description: "Fully functional anonymous forum. Create topics, reply, and delete your own comments. Headless browser functional testing with Chai and Zombie",
+          tags: "API, mongodb, testing, chai, nodejs, express, backend, security, helmetjs, javascript, freecodecamp",
+          link: "https://fcc-anonymous-message-board-dpett.glitch.me/"
+        },
+        {
+          show: true,
+          date: "2018.10.29",
+          name: "Guncontrolgrades.com",
+          description: "A web app to create a personalized voting card for the 2018 midterm elections based on inverted NRA grades. Made for Jonathan Horowitz and Downtown For Democracy.",
+          tags: "react, react-router javascript, web, freelance",
+          link: "https://github.com/dillon/guncontrolgrades_midterms"
+        },
+        {
+          show: true,
+          date: "2018.12.19",
+          name: "Monitor",
+          description: "A mobile app to keep track of your Ethereum wallet's transactions and balances with push notifications.",
+          tags: "react-native, firebase, javascript, mobile, cs50-mobile",
+          link: "https://github.com/dillon/monitor"
+        }
+      ]
+
+    window.onload = function () {
+      const tbody = document.getElementById('projects')
+
+      const tableRows = projects.map((project) => {
+        const row = tbody.insertRow(0)
+
+        const dateColumn = document.createElement('td')
+        dateColumn.innerHTML = project.date
+        row.appendChild(dateColumn)
+
+        const nameColumn = document.createElement('td')
+        nameColumn.innerHTML = project.name
+        row.appendChild(nameColumn)
+
+        const descriptionColumn = document.createElement('td')
+        descriptionColumn.innerHTML = project.description
+        row.appendChild(descriptionColumn)
+
+        const tagsColumn = document.createElement('td')
+        tagsColumn.innerHTML = project.tags
+        row.appendChild(tagsColumn)
+
+        row.addEventListener('click', function () {
+          window.open(project.link)
+        });
+      });
+    }
+  </script>
+
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th onclick="sortTable('date')">Date</th>
+          <th onclick="sortTable('name')">Name</th>
+          <th>Description</th>
+          <th>Tags</th>
+        </tr>
+      </thead>
+      <tbody id="projects">
+        <!-- filled with js-->
+      </tbody>
+    </table>
+  </main>
+</body>
+
+</html>
