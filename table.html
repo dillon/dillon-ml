@@ -21,9 +21,11 @@
     table {
       border-collapse: collapse;
       border-spacing: 1px;
+      width: 100%;
     }
 
     table tbody {
+      width: 100%;
       border-spacing: 2px;
       overflow: scroll;
       background-image: url('images/manga.png');
@@ -40,26 +42,40 @@
     table th {
       color: #666;
       background-color: rgba(200, 200, 200, .5);
-      /* text-align: left; */
+      text-align: left;
     }
 
-    table td {
+    #description-header {
+      border: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    table tbody td {
       vertical-align: top;
       padding: 5px;
       border: 1px solid #666;
     }
 
     table th {
-      vertical-align: top;
+      vertical-align: baseline;
       padding: 5px;
+      margin: 5px;
       border: 1px solid #666;
     }
-
+    
     table tbody tr {
-      background-color: rgba(240, 240, 240, .92);
-      transition: 100ms;
-      cursor: pointer;
+    background-color: rgba(240, 240, 240, .92);
+    transition: 100ms;
+    }
 
+    /* table tbody tr:nth-child(2n) {
+      background-color: rgba(210, 210, 210, .92);
+    } */
+
+    #date-column, #name-column, #description-column {
+      cursor: pointer;
     }
 
     table tbody tr:hover {
@@ -70,6 +86,55 @@
     table tr {
       border: 1px solid #666;
     }
+
+    #show-hidden-files {
+      font-weight: normal;
+      font-size:.9rem;
+      color: #333;
+    }
+
+    .tag {
+      background-color: rgba(180,180,180,.3);
+      border: 1px solid #666;
+      border-radius: 5px;
+      padding: 3px 5px;
+      display:inline-block;
+      margin: 1px;
+      transition: 100ms;
+      cursor: pointer;
+      color: black;
+      font-weight: normal;
+    }
+
+    .tag:hover {
+      background-color: transparent;
+      transition: 100ms;
+    }
+
+    .Swift { background-color: rgba(255, 172, 69, .3); }
+    .C { background-color: rgba(60, 106, 242, 0.3); }
+    .Javascript{ background-color: rgba(241, 224, 90, .3); }
+    .d3 { background-color: rgba(246,156,77,.3); }
+    .jQuery { background-color: rgba(19,102,164,.3); }
+    .Python { background-color: rgba(53, 114, 165, .3); }
+    .react-native { background-color: rgba(180,140,240,.3); }
+    .Firebase { background-color: rgba(253,165,45,.3); }
+    .react { background-color: rgba(36,209,245,.3); }
+    .cs50 { background-color: rgba(199,8,32,.3); }
+    .cs50-mobile { background-color: rgba(150,8,62,.3); }
+    .react-router { background-color: rgba(140,140,140,.3); }
+    .freelance { background-color: rgba(140,240,140,.3); }
+    .RESTful-API { background-color: rgba(142,196,73, .3); }
+    .mongodb { background-color: rgba(232,136,34,0.3); }
+    .freecodecamp { background-color: rgba(9,99,12, .3); }
+    .helmetjs { background-color: rgba(223,72,203, .3); }
+    .SQLite { background-color: rgba(52,54,168, .3); }
+    .nodejs { background-color: rgba(140,189,71,.3); }
+    .flask { background-color: rgba(180,180,180,.3); }
+    .redux { background-color: rgba(114, 56, 213, 0.3); }
+    .sass { background-color: rgba(255, 115, 185, 0.3); }
+    .express { background-color: rgba(43, 140, 220, 0.3); }
+
   </style>
 </head>
 
@@ -83,7 +148,7 @@
           date: "2018.03.29",
           name: "Javascript Calculator",
           description: "A calculator built with jQuery",
-          tags: "jQuery, javascript, web, freecodecamp",
+          tags: ['jQuery', 'Javascript', 'web', 'freecodecamp'],
           link: "https://codepen.io/dpett122/pen/yKzovY"
         },
         {
@@ -91,7 +156,7 @@
           date: "2018.04.20",
           name: "Masternode Status",
           description: "MacOS Status Bar app that displays the amount of XMX in a Xuma wallet.",
-          tags: "Swift, macOS",
+          tags: ['Swift', 'macOS'],
           link: "https://github.com/dillon/Masternode-Status"
         },
         {
@@ -99,7 +164,7 @@
           date: "2018.06.01",
           name: "Drum Machine",
           description: "A web-based drum machine built with react and scss",
-          tags: "react, scss, web, freecodecamp",
+          tags: ['react', 'sass', 'web', 'freecodecamp'],
           link: "https://codepen.io/dpett122/pen/Xqyeov?editors=0110"
         },
         {
@@ -107,7 +172,7 @@
           date: "2018.06.12",
           name: "Markdown Previewer",
           description: "A web-based text editor with a built-in markdown previewer, made with React",
-          tags: "react, web, freecodecamp",
+          tags: ['react', 'web', 'freecodecamp'],
           link: "https://github.com/dillon/Markdown-Previewer"
         },
         {
@@ -115,7 +180,7 @@
           date: "2018.07.07",
           name: "JPG Recovery",
           description: "A command line program written in C that recovers .jpg files from a corrupted memory card.",
-          tags: "C, cs50",
+          tags: ['C', 'cs50'],
           link: "https://github.com/dillon/cs50/tree/master/pset4/recover"
         },
         {
@@ -123,7 +188,7 @@
           date: "2018.07.12",
           name: "Spell Checker",
           description: "A command line program written in C that compares a text file that compares large text files against a dictionary to find mispelled words.",
-          tags: "C, cs50",
+          tags: ['C', 'cs50'],
           link: "https://github.com/dillon/cs50/blob/master/pset5/speller/README.md"
         },
         {
@@ -131,7 +196,7 @@
           date: "2018.07.17",
           name: "Password Cracker",
           description: "A command line program that cracks passwords hashed with C's DES-based crypt function. Originally written in C and later ported to python.",
-          tags: "C, Python, cs50",
+          tags: ['C', 'Python', 'cs50'],
           link: "https://github.com/dillon/cs50/tree/master/pset2/crack"
         },
         {
@@ -139,7 +204,7 @@
           date: "2018.07.20",
           name: "Similarities Checker",
           description: "A Flask app that lets user upload two files and see the similarities between the files (by substring of n length, by sentence, or by line).",
-          tags: "flask, jinja, python, javascript, cs50",
+          tags: ['flask', 'jinja', 'Python', 'Javascript', 'cs50'],
           link: "https://github.com/dillon/cs50/tree/master/pset6/similarities"
         },
         {
@@ -147,7 +212,7 @@
           date: "2018.07.23",
           name: "Mock Exchange",
           description: "A mock stock exchange in the form of a Flask app (utilizing an SQLite database) that lets users register and manage their account, get stock quotes, and \"buy\" and \"sell\" stocks at their current market price.",
-          tags: "flask, sqlite, jinja, python, javascript, jquery, web, cs50",
+          tags: ['flask', 'SQLite', 'jinja', 'Python', 'Javascript', 'jQuery', 'web', 'cs50'],
           link: "https://github.com/dillon/cs50/tree/master/pset7/finance"
         },
         {
@@ -155,7 +220,7 @@
           date: "2018.07.30",
           name: "Local News Map",
           description: "A Flask web app utilizing an SQLite database and Google Maps API that allows you to visualize local news all over the country.",
-          tags: "flask, sqlite, geolocation, python, javascript, jquery, web, cs50",
+          tags: ['flask', 'SQLite', 'geolocation', 'Python', 'Javascript', 'jQuery', 'web', 'cs50'],
           link: "https://github.com/dillon/cs50/tree/master/pset8/mashup"
         },
         {
@@ -163,31 +228,31 @@
           date: "2018.08.03",
           name: "Todo List",
           description: "A basic todo app made with vanilla javascript.",
-          tags: "javascript, web, cs50-mobile",
-          link: "https://github.com/dillon/cs50-mobile/tree/master/project0"
+          tags: ['Javascript', 'web', 'cs50-mobile'],
+          link: "https://github.com/dillon/'cs50-mobile'/tree/master/project0"
         },
         {
           show: false,
           date: "2018.08.07",
           name: "Pomodoro Timer",
           description: "A mobile app to help you follow the pomodoro technique.",
-          tags: "react-native, react-naviation, javascript, mobile, cs50-mobile",
-          link: "https://github.com/dillon/cs50-mobile/tree/master/project1"
+          tags: ['react-native', 'react-navigation', 'Javascript', 'mobile', 'cs50-mobile'],
+          link: "https://github.com/dillon/'cs50-mobile'/tree/master/project1"
         },
         {
           show: true,
           date: "2018.08.13",
           name: "Movie & TV Guide",
           description: "A mobile app to search for information about movies and TV shows.",
-          tags: "react-native, axios, react-naviation, javascript, mobile, cs50-mobile",
-          link: "https://github.com/dillon/cs50-mobile/tree/master/project2"
+          tags: ['react-native', 'axios', 'react-navigation', 'Javascript', 'mobile', 'cs50-mobile'],
+          link: "https://github.com/dillon/'cs50-mobile'/tree/master/project2"
         },
         {
           show: true,
           date: "2018.08.23",
           name: "Crypto Dashboard",
           description: "A mobile app that displays market info and news for the top 200 cryptocurrencies by market cap.",
-          tags: "react-native, redux, javascript, mobile, cs50",
+          tags: ['react-native', 'redux', 'Javascript', 'mobile', 'cs50'],
           link: "https://github.com/dillon/crypto-dashboard"
         },
         {
@@ -195,7 +260,7 @@
           date: "2018.09.18",
           name: "d3 Bar Chart",
           description: "US GDP data mapped with d3",
-          tags: "d3, javascript, web, data-visualization, freecodecamp",
+          tags: ['d3', 'Javascript', 'web', 'data-visualization', 'freecodecamp'],
           link: "https://codepen.io/dpett122/full/jvexPm/"
         },
         {
@@ -203,7 +268,7 @@
           date: "2018.09.18",
           name: "d3 Scatterplot",
           description: "Professional cycling data mapped with d3",
-          tags: "d3, javascript, web, data-visualization, freecodecamp",
+          tags: ['d3', 'Javascript', 'web', 'data-visualization', 'freecodecamp'],
           link: "https://codepen.io/dpett122/full/ZMqPLp/"
         },
         {
@@ -211,7 +276,7 @@
           date: "2018.09.18",
           name: "d3 Heat Map",
           description: "Monthly Global Land-Surface Temp data mapped with d3",
-          tags: "d3, javascript, web, data-visualization, freecodecamp",
+          tags: ['d3', 'Javascript', 'web', 'data-visualization', 'freecodecamp'],
           link: "https://codepen.io/dpett122/full/OoazgM/"
         },
         {
@@ -219,7 +284,7 @@
           date: "2018.09.20",
           name: "d3 Choropleth Map",
           description: "US Education data mapped with d3",
-          tags: "d3, javascript, web, data-visualization, freecodecamp",
+          tags: ['d3', 'Javascript', 'web', 'data-visualization', 'freecodecamp'],
           link: "https://codepen.io/dpett122/full/aaQaQX/"
         },
         {
@@ -227,7 +292,7 @@
           date: "2018.09.21",
           name: "d3 Treemap Diagram",
           description: "Kickstarter top pledges mapped with d3 and the Kickstarter API",
-          tags: "d3, javascript, web, data-visualization, freecodecamp",
+          tags: ['d3', 'Javascript', 'web', 'data-visualization', 'freecodecamp'],
           link: "https://codepen.io/dpett122/full/RYvXLq/"
         },
         {
@@ -235,7 +300,7 @@
           date: "2018.09.23",
           name: "Timestamp API",
           description: "API microservice for retrieving and parsing date/time",
-          tags: "API, backend, nodejs, express, javascript, freecodecamp",
+          tags: ['RESTful-API', 'backend', 'nodejs', 'express', 'Javascript', 'freecodecamp'],
           link: "https://api-project-timestamp.glitch.me"
         },
         {
@@ -243,7 +308,7 @@
           date: "2018.09.23",
           name: "Request Header Parser API",
           description: "API microservice that parses request headers",
-          tags: "API, backend, nodejs, express, javascript, freecodecamp",
+          tags: ['RESTful-API', 'backend', 'nodejs', 'express', 'Javascript', 'freecodecamp'],
           link: "https://hot-marble.glitch.me"
         },
         {
@@ -251,7 +316,7 @@
           date: "2018.09.24",
           name: "URL Shortening API",
           description: "API microservice that creates shortened URLs.",
-          tags: "API, backend, mongodb, nodejs, express, javascript, freecodecamp",
+          tags: ['RESTful-API', 'backend', 'mongodb', 'nodejs', 'express', 'Javascript', 'freecodecamp'],
           link: "https://fcc-url-shorterner-microservice.glitch.me/"
         },
         {
@@ -259,7 +324,7 @@
           date: "2018.09.25",
           name: "Exercise Tracker",
           description: "Create an account and keep track of your exercises.",
-          tags: "API, backend, mongodb, nodejs, express, javascript, freecodecamp",
+          tags: ['RESTful-API', 'backend', 'mongodb', 'nodejs', 'express', 'Javascript', 'freecodecamp'],
           link: "https://fcc-exercise-tracker-dpett.glitch.me/"
         },
         {
@@ -267,7 +332,7 @@
           date: "2018.09.25",
           name: "File Metadata Microservice",
           description: "Microservice that shows metadata of files uploaded",
-          tags: "API, backend, nodejs, express, javascript, freecodecamp",
+          tags: ['RESTful-API', 'backend', 'nodejs', 'express', 'Javascript', 'freecodecamp'],
           link: "https://fcc-file-metadata-service-dpett.glitch.me"
         },
         {
@@ -275,7 +340,7 @@
           date: "2018.09.30",
           name: "Metric/Imperial Converter",
           description: "API microservice for converting metric/imperial units",
-          tags: "API, backend, nodejs, express, security, helmetjs, javascript, freecodecamp",
+          tags: ['RESTful-API', 'backend', 'nodejs', 'express', 'security', 'helmetjs', 'Javascript', 'freecodecamp'],
           link: "https://fcc-metric-imperial-converter.glitch.me/"
         },
         {
@@ -283,7 +348,7 @@
           date: "2018.10.02",
           name: "Issue Tracker",
           description: "API microservice for creating and managing project issues.",
-          tags: "API, mongodb, nodejs, express, backend, security, helmetjs, javascript, freecodecamp",
+          tags: ['RESTful-API', 'mongodb', 'nodejs', 'express', 'backend', 'security', 'helmetjs', 'Javascript', 'freecodecamp'],
           link: "https://fcc-issue-tracker-2.glitch.me/"
         },
         {
@@ -291,7 +356,7 @@
           date: "2018.10.09",
           name: "Personal Library",
           description: "Forum for keeping track of and commenting on book titles.",
-          tags: "API, mongodb, nodejs, express, backend, security, helmetjs, javascript, freecodecamp",
+          tags: ['RESTful-API', 'mongodb', 'nodejs', 'express', 'backend', 'security', 'helmetjs', 'Javascript', 'freecodecamp'],
           link: "https://fcc-personal-library-dpett.glitch.me/"
         },
         {
@@ -299,7 +364,7 @@
           date: "2018.10.10",
           name: "Stock Price Checker",
           description: "API microservice for checking stock prices and \"liking\" stocks. Headless browser functional testing with Chai and Zombie",
-          tags: "API, mongodb, testing, chai, nodejs, express, backend, security, helmetjs, javascript, freecodecamp",
+          tags: ['RESTful-API', 'mongodb', 'testing', 'chai', 'nodejs', 'express', 'backend', 'security', 'helmetjs', 'Javascript', 'freecodecamp'],
           link: "https://fcc-stock-price-checker-dpett.glitch.me/"
         },
         {
@@ -307,7 +372,7 @@
           date: "2018.10.12",
           name: "Anonymous Message Board",
           description: "Fully functional anonymous forum. Create topics, reply, and delete your own comments. Headless browser functional testing with Chai and Zombie",
-          tags: "API, mongodb, testing, chai, nodejs, express, backend, security, helmetjs, javascript, freecodecamp",
+          tags: ['RESTful-API', 'mongodb', 'testing', 'chai', 'nodejs', 'express', 'backend', 'security', 'helmetjs', 'Javascript', 'freecodecamp'],
           link: "https://fcc-anonymous-message-board-dpett.glitch.me/"
         },
         {
@@ -315,7 +380,7 @@
           date: "2018.10.29",
           name: "Guncontrolgrades.com",
           description: "A web app to create a personalized voting card for the 2018 midterm elections based on inverted NRA grades. Made for Jonathan Horowitz and Downtown For Democracy.",
-          tags: "react, react-router javascript, web, freelance",
+          tags: ['react', 'react-router', 'Javascript', 'web', 'freelance'],
           link: "https://github.com/dillon/guncontrolgrades_midterms"
         },
         {
@@ -323,36 +388,88 @@
           date: "2018.12.19",
           name: "Monitor",
           description: "A mobile app to keep track of your Ethereum wallet's transactions and balances with push notifications.",
-          tags: "react-native, firebase, javascript, mobile, cs50-mobile",
+          tags: ['react-native', 'Firebase', 'Javascript', 'mobile', 'cs50-mobile'],
           link: "https://github.com/dillon/monitor"
         }
       ]
 
-    window.onload = function () {
+    function handleCheckbox() {
+      const checkbox = document.getElementById('checkbox')
+      let filter = document.getElementById('filter');
+      if (filter) filter = filter.innerText
+
+      fillTable(checkbox.checked, filter);
+    }
+
+    window.onload = () => fillTable(false)
+
+    function fillTable(showHidden, filterBy) {
       const tbody = document.getElementById('projects')
+      tbody.innerHTML = null;
+
+      if (filterBy) {
+        // add filter tag if need be;
+        const filter = document.createElement('span')
+        filter.setAttribute('class', 'tag')
+        filter.classList.add(filterBy)
+        filter.id = 'filter'
+        filter.innerHTML = filterBy
+        filter.addEventListener('click', function () {
+          const checkbox = document.getElementById('checkbox')
+          fillTable(checkbox.checked, null)
+          console.log('hi');
+        })
+
+        document.getElementById('filter-container').innerHTML = '';
+        document.getElementById('filter-container').appendChild(filter);
+      } else {
+        document.getElementById('filter-container').innerHTML = ''
+      }
 
       const tableRows = projects.map((project) => {
-        const row = tbody.insertRow(0)
+        if (!filterBy || project.tags.includes(filterBy)) {
+          if (showHidden || project.show) {
+            const row = tbody.insertRow(0)
 
-        const dateColumn = document.createElement('td')
-        dateColumn.innerHTML = project.date
-        row.appendChild(dateColumn)
+            const dateColumn = document.createElement('td')
+            dateColumn.innerHTML = project.date
+            dateColumn.id = 'date-column'
+            dateColumn.addEventListener('click', function () { window.open(project.link) });
+            row.appendChild(dateColumn)
 
-        const nameColumn = document.createElement('td')
-        nameColumn.innerHTML = project.name
-        row.appendChild(nameColumn)
+            const nameColumn = document.createElement('td')
+            nameColumn.innerHTML = project.name
+            nameColumn.id = 'name-column'
+            nameColumn.addEventListener('click', function () { window.open(project.link) });
+            row.appendChild(nameColumn)
 
-        const descriptionColumn = document.createElement('td')
-        descriptionColumn.innerHTML = project.description
-        row.appendChild(descriptionColumn)
+            const descriptionColumn = document.createElement('td')
+            descriptionColumn.innerHTML = project.description
+            descriptionColumn.id = 'description-column'
+            descriptionColumn.addEventListener('click', function () { window.open(project.link) });
+            row.appendChild(descriptionColumn)
 
-        const tagsColumn = document.createElement('td')
-        tagsColumn.innerHTML = project.tags
-        row.appendChild(tagsColumn)
+            const tagsColumn = document.createElement('td')
+            project.tags.map((tagText, index) => {
+              const tag = document.createElement('span')
+              tag.setAttribute('class', 'tag')
+              tag.classList.add(tagText)
+              tag.innerHTML = tagText;
+              // if (index%3===0) {
+              //   const br = document.createElement('br')
+              //   tagsColumn.appendChild(br);
+              // }
+              tag.addEventListener('click', function () {
+                const checkboxVal = document.getElementById('checkbox')
+                fillTable(checkboxVal.checked, tagText)
+              })
+              tagsColumn.appendChild(tag)
 
-        row.addEventListener('click', function () {
-          window.open(project.link)
-        });
+
+            })
+            row.appendChild(tagsColumn)
+          }
+        }
       });
     }
 
@@ -364,8 +481,21 @@
         <tr>
           <th>Date</th>
           <th>Name</th>
-          <th>Description</th>
-          <th>Tags</th>
+          <th id="description-header">
+            Description
+            <div id="show-hidden-files">
+              <input id="checkbox" onclick="handleCheckbox()" type="checkbox" name="showHidden" value="showHidden">
+              show hidden files
+            </div>
+            <div></div>
+          </th>
+          <th id="tag-header">
+            Tags
+            <span id="filter-container">
+              <!-- filled with js -->
+            </span>
+            <div></div>
+          </th>
         </tr>
       </thead>
       <tbody id="projects">
