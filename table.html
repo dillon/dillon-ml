@@ -21,7 +21,6 @@
     table {
       border-collapse: collapse;
       border-spacing: 1px;
-      cursor: pointer;
     }
 
     table tbody {
@@ -56,12 +55,14 @@
       border: 1px solid #666;
     }
 
-    table tr {
+    table tbody tr {
       background-color: rgba(240, 240, 240, .92);
       transition: 100ms;
+      cursor: pointer;
+
     }
 
-    table tr:hover {
+    table tbody tr:hover {
       background-color: rgba(220, 220, 220, .94);
       transition: 100ms;
     }
@@ -354,14 +355,15 @@
         });
       });
     }
+
   </script>
 
   <main>
     <table>
       <thead>
         <tr>
-          <th onclick="sortTable('date')">Date</th>
-          <th onclick="sortTable('name')">Name</th>
+          <th>Date</th>
+          <th>Name</th>
           <th>Description</th>
           <th>Tags</th>
         </tr>
