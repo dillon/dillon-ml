@@ -1,6 +1,7 @@
 <!DOCTYPE html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     @font-face {
@@ -278,17 +279,19 @@ BUGS:
     }
 
     footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       margin: 40px 0px 15px 0px;
+      padding-top: 5px;
       border-top: 1px solid rgb(231, 233, 235);
     }
 
-    footer>div {
-      padding-top: 5px;
-      width: 100%;
-      flex: 1;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between
+    @media only screen and (max-width: 450px) {
+      footer {
+        display: inline-block;
+        width: 100%;
+      }
     }
 
     h1,
@@ -301,12 +304,12 @@ BUGS:
 
 <body>
   <h1>Dillon Petito</h1>
-  <p>
-    Software Engineer specializing in Full Stack Javascript: <code>React</code>, <code>React Native</code>, <code>Redux</code>,
+  <p id="bio">
+    Software Engineer specializing in Full Stack Javascript <code>React</code>, <code>React Native</code>, <code>Redux</code>,
     <code>Node.js</code>.
   </p>
   <div class="flare social">
-    <span>dillonpetito@gmail.com</span><br />
+    <a target="_blank" rel="noopener noreferrer" href="mailto:dillonpetito@gmail.com">dillonpetito@gmail.com</a><br />
     <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon">github.com/dillon</a><br />
     <a target="_blank" rel="noopener noreferrer" href="https://dillon.ml">dillon.ml</a>
   </div>
@@ -420,13 +423,10 @@ BUGS:
       </ul>
     </div>
   </div>
-  <footer>
-    <div class="flare social">
-      <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon">github.com/dillon</a><br />
-      <span>dillonpetito@gmail.com</span><br />
-      <a target="_blank" rel="noopener noreferrer" href="https://dillon.ml">dillon.ml</a>
-    </div>
-    </div>
+  <footer class="flare social">
+    <a target="_blank" rel="noopener noreferrer" href="mailto:dillonpetito@gmail.com">dillonpetito@gmail.com</a><br />
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon">github.com/dillon</a><br />
+    <a target="_blank" rel="noopener noreferrer" href="https://dillon.ml">dillon.ml</a>
   </footer>
 </body>
 
