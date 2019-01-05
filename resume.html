@@ -206,6 +206,24 @@ BUGS:
 
     /* start styling */
 
+    @media print {
+      html {
+        font-size: 12px;
+      }
+
+      .block {
+        padding: 12px !important;
+      }
+
+      .block-title {
+        padding-bottom: 12px !important;
+        padding-top: 12px !important;
+      }
+      footer {
+        visibility: hidden;
+      }
+    }
+
     html {
       font-family: "Inter UI", Helvetica, sans-serif;
       /* font-family: 'Times New Roman', Times, serif; */
@@ -263,6 +281,14 @@ BUGS:
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 
+    .bottom-grid {
+      display: grid;
+      grid-gap: 10px 10px;
+      align-content: space-evenly;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+
+    }
+
     .date {
       font-weight: 500;
     }
@@ -276,6 +302,9 @@ BUGS:
     ul {
       margin-block-start: .5em;
       padding-left: 2em;
+      margin-bottom: 0px;
+      margin-block-end: 0px;
+      padding-bottom: 0px;
     }
 
     footer {
@@ -364,11 +393,11 @@ BUGS:
     </a>
     <div class="block">
       <span class="title">Harvard CS50 Mobile App Development with React Native</span> <span class="flare date">2018</span><br>
-      <code>React Native</code>, <code>Redux</code>, Debugging, and Testing for mobile.
+      <code>React Native</code>, <code>Redux</code>, debugging, testing for mobile.
     </div>
   </div>
   <div class="block-title">SKILLS</div>
-  <div class="grid">
+  <div class="bottom-grid">
     <div class="block">
       <div class="inner-block-title">GENERAL</div>
       <ul>
@@ -393,8 +422,8 @@ BUGS:
       <div class="inner-block-title">BACK END</div>
       <ul>
         <li>NodeJS <code>confident</code></li>
-        <li>Firebase <code>confident</code></li>
         <li>RESTful API <code>confident</code></li>
+        <li>Firebase <code>confident</code></li>
         <li>Heroku <code>familiar</code></li>
         <li>Mongodb <code>familiar</code></li>
         <li>SQLite <code>familiar</code></li>
@@ -418,7 +447,6 @@ BUGS:
         <li>C <code>familiar</code></li>
         <li>Typescript <code>familiar</code></li>
         <li>Sass <code>familiar</code></li>
-        <li>SQLite <code>familiar</code></li>
         <li>Swift <code>beginner</code></li>
       </ul>
     </div>
