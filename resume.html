@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: normal;
+      font-weight: 100;
+      src: url("font-files/Inter-UI-Thin.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-Thin.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: italic;
+      font-weight: 100;
+      src: url("font-files/Inter-UI-ThinItalic.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-ThinItalic.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: normal;
+      font-weight: 200;
+      src: url("font-files/Inter-UI-ExtraLight.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-ExtraLight.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: italic;
+      font-weight: 200;
+      src: url("font-files/Inter-UI-ExtraLightItalic.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-ExtraLightItalic.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: normal;
+      font-weight: 300;
+      src: url("font-files/Inter-UI-Light.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-Light.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: italic;
+      font-weight: 300;
+      src: url("font-files/Inter-UI-LightItalic.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-LightItalic.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: normal;
+      font-weight: 400;
+      src: url("font-files/Inter-UI-Regular.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-Regular.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: italic;
+      font-weight: 400;
+      src: url("font-files/Inter-UI-Italic.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-Italic.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: normal;
+      font-weight: 500;
+      src: url("font-files/Inter-UI-Medium.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-Medium.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: italic;
+      font-weight: 500;
+      src: url("font-files/Inter-UI-MediumItalic.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-MediumItalic.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: normal;
+      font-weight: 600;
+      src: url("font-files/Inter-UI-SemiBold.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-SemiBold.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: italic;
+      font-weight: 600;
+      src: url("font-files/Inter-UI-SemiBoldItalic.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-SemiBoldItalic.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: normal;
+      font-weight: 700;
+      src: url("font-files/Inter-UI-Bold.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-Bold.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: italic;
+      font-weight: 700;
+      src: url("font-files/Inter-UI-BoldItalic.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-BoldItalic.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: normal;
+      font-weight: 800;
+      src: url("font-files/Inter-UI-ExtraBold.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-ExtraBold.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: italic;
+      font-weight: 800;
+      src: url("font-files/Inter-UI-ExtraBoldItalic.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-ExtraBoldItalic.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: normal;
+      font-weight: 900;
+      src: url("font-files/Inter-UI-Black.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-Black.woff?v=3.2") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter UI';
+      font-style: italic;
+      font-weight: 900;
+      src: url("font-files/Inter-UI-BlackItalic.woff2?v=3.2") format("woff2"),
+        url("font-files/Inter-UI-BlackItalic.woff?v=3.2") format("woff");
+    }
+
+    /* --------------------------------------------------------------------------
+Single variable font.
+Note that you may want to do something like this to make sure you're serving
+constant fonts to older browsers:
+html {
+  font-family: 'Inter UI', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter UI var', sans-serif;
+  }
+}
+BUGS:
+- Safari 12.0 will default to italic instead of regular when font-weight
+  is provided in a @font-face declaration.
+  Workaround: Use "Inter UI var alt" for Safari, or explicitly set
+  `font-variation-settings:"slnt" DEGREE`.
+*/
+    @font-face {
+      font-family: 'Inter UI var';
+      font-weight: 100 900;
+      font-style: oblique 0deg 10deg;
+      src: url("font-files/Inter-UI.var.woff2?v=3.2") format("woff2-variations"),
+        url("font-files/Inter-UI.var.woff2?v=3.2") format("woff2");
+    }
+
+    /* --------------------------------------------------------------------------
+"Inter UI var alt" is recommended for Safari and Edge, for reliable italics.
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter UI var alt', sans-serif;
+  }
+}
+*/
+    @font-face {
+      font-family: 'Inter UI var alt';
+      font-weight: 100 900;
+      font-style: normal;
+      font-named-instance: 'Regular';
+      src: url("font-files/Inter-UI-upright.var.woff2?v=3.2") format("woff2 supports variations(gvar)"),
+        url("font-files/Inter-UI-upright.var.woff2?v=3.2") format("woff2-variations"),
+        url("font-files/Inter-UI-upright.var.woff2?v=3.2") format("woff2");
+    }
+
+    @font-face {
+      font-family: 'Inter UI var alt';
+      font-weight: 100 900;
+      font-style: italic;
+      font-named-instance: 'Italic';
+      src: url("font-files/Inter-UI-italic.var.woff2?v=3.2") format("woff2 supports variations(gvar)"),
+        url("font-files/Inter-UI-italic.var.woff2?v=3.2") format("woff2-variations"),
+        url("font-files/Inter-UI-italic.var.woff2?v=3.2") format("woff2");
+    }
+
+
+
+    /* start styling */
+
+    html {
+      font-family: "Inter UI", Helvetica, sans-serif;
+      /* font-family: 'Times New Roman', Times, serif; */
+      /* font-weight: 400; */
+    }
+
+    .flare {
+      color: rgb(67, 32, 239);
+    }
+
+    .block {
+      border-radius: 3px;
+      padding: 20px;
+      border: 1px solid rgb(231, 233, 235);
+    }
+
+    .block-title {
+      font-weight: 600;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      font-size: .85rem;
+    }
+
+    .inner-block-title {
+      font-weight: 600;
+      font-size: .85rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .social>a:hover {
+      text-decoration: underline;
+    }
+
+    .block>.title {
+      font-weight: 600;
+    }
+
+    /* .grid > a:hover {
+      border: 1px solid rgb(197, 198, 199);
+    } */
+
+    .grid>a:hover>.title {
+      color: rgb(67, 32, 239);
+      /* text-decoration: underline; */
+    }
+
+    .grid {
+      display: grid;
+      grid-gap: 10px 10px;
+      align-content: space-evenly;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .date {
+      font-weight: 500;
+    }
+
+    code {
+      background-color: rgba(67, 32, 239, .1);
+      padding: 0px 2px;
+      color: #000;
+    }
+
+    ul {
+      margin-block-start: .5em;
+      padding-left: 2em;
+    }
+
+    footer {
+      margin: 40px 0px 15px 0px;
+      border-top: 1px solid rgb(231, 233, 235);
+    }
+
+    footer>div {
+      padding-top: 5px;
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between
+    }
+
+    h1,
+    div {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Dillon Petito</h1>
+  <p>
+    Software Engineer specializing in Full Stack Javascript: <code>React</code>, <code>React Native</code>, <code>Redux</code>,
+    <code>Node.js</code>.
+  </p>
+  <div class="flare social">
+    <span>dillonpetito@gmail.com</span><br />
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon">github.com/dillon</a><br />
+    <a target="_blank" rel="noopener noreferrer" href="https://dillon.ml">dillon.ml</a>
+  </div>
+  <div class="block-title">SELECTED PROJECTS</div>
+  <div class="grid">
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon/monitor" class="block">
+      <span class="title">Monitor</span> <span class="flare date">2018</span></strong><br>
+      <code>React Native</code> mobile app to keep track of your Ethereum wallet's transactions and balances with
+      push
+      notifications. Uses <code>Firebase</code> cloud messaging, cloud functions, user authentication realtime
+      database,
+      and more for the backend. In beta via Testflight.
+    </a>
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon/guncontrolgrades_midterms" class="block">
+      <span class="title">GunControlGrades.org</span> <span class="flare date">2018</span></strong><br>
+      <code>React</code> web app enabling users to create a personalized voting card for the 2018 midterm elections
+      based on their stance on gun control. Made for Jonathan Horowitz and Downtown For Democracy.
+    </a>
+  </div>
+  <div class="block-title">SELECTED EXPERIENCE</div>
+  <div class="grid">
+    <div class="block">
+      <span class="title">Artist Assistant, Jonathan Horowitz</span> <span class="flare date">2017-Present</span></strong><br>
+      2D and 3D image post-production; book and web design; software development.
+    </div>
+    <div class="block">
+      <span class="title">Marketing Coordinator, VFILES</span> <span class="flare date">2016-2017</span></strong><br>
+      Managed production, release, and analytics for media across all communication platforms.
+    </div>
+    <div class="block">
+      <span class="title">Digital Preservation Fellow, Rhizome</span> <span class="flare date">2016</span><br>
+      Audited web-based artworks for re-staging in the Net Art Anthology. Archived platform-based artworks and
+      digital
+      museums with Rhizome's Webrecorder software.
+    </div>
+  </div>
+  <div class="block-title">EDUCATION</div>
+  <div class="grid">
+    <div class="block">
+      <span class="title">New York University, Gallatin</span> <span class="flare date">2012-2016</span><br>
+      B.A. Individualized major concentrating in contemporary and digital art history and theory.
+    </div>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.freecodecamp.org/dillon" class="block">
+      <span class="title">FreeCodeCamp</span> <span class="flare date">2018</span><br>
+      Full Stack certification, representing 1800 hours of coursework.
+    </a>
+    <a target="_blank" rel="noopener noreferrer" href="https://courses.edx.org/certificates/870f5805a22246a08b066fe64fb4d802"
+      class="block">
+      <span class="title">Harvard CS50: Introduction to Computer Science</span> <span class="flare date">2018</span><br>
+      Computer science fundamentals in <code>C</code>, <code>Python</code>, <code>SQL</code>, <code>Javascript</code>
+      and more.
+    </a>
+    <div class="block">
+      <span class="title">Harvard CS50 Mobile App Development with React Native</span> <span class="flare date">2018</span><br>
+      <code>React Native</code>, <code>Redux</code>, Debugging, and Testing for mobile.
+    </div>
+  </div>
+  <div class="block-title">SKILLS</div>
+  <div class="grid">
+    <div class="block">
+      <div class="inner-block-title">GENERAL</div>
+      <ul>
+        <li>Algorithms and Data Structures</li>
+        <li>Responsive Web Design</li>
+        <li>Data Visualization</li>
+        <li>APIs and Microservices</li>
+        <li>Information Security and QA.</li>
+      </ul>
+    </div>
+    <div class="block">
+      <div class="inner-block-title">FRONT END</div>
+      <ul>
+        <li>React <code>expert</code></li>
+        <li>React Native <code>confident</code></li>
+        <li>Redux <code>confident</code></li>
+        <li>d3js <code>confident</code></li>
+        <li>Flask <code>familiar</code></li>
+      </ul>
+    </div>
+    <div class="block">
+      <div class="inner-block-title">BACK END</div>
+      <ul>
+        <li>NodeJS <code>confident</code></li>
+        <li>Firebase <code>confident</code></li>
+        <li>RESTful API <code>confident</code></li>
+        <li>Heroku <code>familiar</code></li>
+        <li>Mongodb <code>familiar</code></li>
+        <li>SQLite <code>familiar</code></li>
+      </ul>
+    </div>
+    <div class="block">
+      <div class="inner-block-title">SOFTWARE</div>
+      <ul>
+        <li>Git &amp; Github <code>expert</code></li>
+        <li>VS Code <code>expert</code></li>
+        <li>Adobe Suite <code>expert</code></li>
+        <li>XCode <code>beginner</code></li>
+      </ul>
+    </div>
+    <div class="block">
+      <div class="inner-block-title">LANGUAGES</div>
+      <ul>
+        <li>Javascript ES6 <code>expert</code></li>
+        <li>HTML &amp; CSS <code>expert</code></li>
+        <li>Python <code>confident</code></li>
+        <li>C <code>familiar</code></li>
+        <li>Typescript <code>familiar</code></li>
+        <li>Sass <code>familiar</code></li>
+        <li>SQLite <code>familiar</code></li>
+        <li>Swift <code>beginner</code></li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div class="flare social">
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon">github.com/dillon</a><br />
+      <span>dillonpetito@gmail.com</span><br />
+      <a target="_blank" rel="noopener noreferrer" href="https://dillon.ml">dillon.ml</a>
+    </div>
+    </div>
+  </footer>
+</body>
+
+</html>
