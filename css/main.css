@@ -16,6 +16,14 @@ body {
   font-size: 1em
 }
 
+.link-arrow {
+  visibility: hidden;
+}
+
+a:hover .link-arrow {
+  visibility: visible;
+}
+
 .flare {
   color: rgb(67, 32, 239);
 }
