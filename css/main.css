@@ -3,7 +3,17 @@ html {
 }
 
 body {
+  padding: 10px;
   max-width:800px;
+  margin: auto;
+}
+
+#bio {
+  font-size: 1.1em;
+}
+
+#bio code {
+  font-size: 1em
 }
 
 .flare {
@@ -15,6 +25,7 @@ body {
   padding: 20px;
   border: 1px solid rgb(231, 233, 235);
 }
+
 
 .block-title {
   font-weight: 600;
@@ -74,7 +85,7 @@ code {
   background-color: rgba(67, 32, 239, .1);
   padding: 0px 2px;
   color: #000;
-  font-size: 14px;
+  font-size: 1em;
 }
 
 ul {
