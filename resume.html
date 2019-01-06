@@ -2,213 +2,16 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="font-files/inter-ui.css">
+  <link rel="stylesheet" href="css/main.css">
   <style>
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: normal;
-      font-weight: 100;
-      src: url("font-files/Inter-UI-Thin.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-Thin.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: italic;
-      font-weight: 100;
-      src: url("font-files/Inter-UI-ThinItalic.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-ThinItalic.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: normal;
-      font-weight: 200;
-      src: url("font-files/Inter-UI-ExtraLight.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-ExtraLight.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: italic;
-      font-weight: 200;
-      src: url("font-files/Inter-UI-ExtraLightItalic.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-ExtraLightItalic.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: normal;
-      font-weight: 300;
-      src: url("font-files/Inter-UI-Light.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-Light.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: italic;
-      font-weight: 300;
-      src: url("font-files/Inter-UI-LightItalic.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-LightItalic.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: normal;
-      font-weight: 400;
-      src: url("font-files/Inter-UI-Regular.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-Regular.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: italic;
-      font-weight: 400;
-      src: url("font-files/Inter-UI-Italic.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-Italic.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: normal;
-      font-weight: 500;
-      src: url("font-files/Inter-UI-Medium.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-Medium.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: italic;
-      font-weight: 500;
-      src: url("font-files/Inter-UI-MediumItalic.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-MediumItalic.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: normal;
-      font-weight: 600;
-      src: url("font-files/Inter-UI-SemiBold.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-SemiBold.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: italic;
-      font-weight: 600;
-      src: url("font-files/Inter-UI-SemiBoldItalic.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-SemiBoldItalic.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: normal;
-      font-weight: 700;
-      src: url("font-files/Inter-UI-Bold.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-Bold.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: italic;
-      font-weight: 700;
-      src: url("font-files/Inter-UI-BoldItalic.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-BoldItalic.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: normal;
-      font-weight: 800;
-      src: url("font-files/Inter-UI-ExtraBold.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-ExtraBold.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: italic;
-      font-weight: 800;
-      src: url("font-files/Inter-UI-ExtraBoldItalic.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-ExtraBoldItalic.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: normal;
-      font-weight: 900;
-      src: url("font-files/Inter-UI-Black.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-Black.woff?v=3.2") format("woff");
-    }
-
-    @font-face {
-      font-family: 'Inter UI';
-      font-style: italic;
-      font-weight: 900;
-      src: url("font-files/Inter-UI-BlackItalic.woff2?v=3.2") format("woff2"),
-        url("font-files/Inter-UI-BlackItalic.woff?v=3.2") format("woff");
-    }
-
-    /* --------------------------------------------------------------------------
-Single variable font.
-Note that you may want to do something like this to make sure you're serving
-constant fonts to older browsers:
-html {
-  font-family: 'Inter UI', sans-serif;
-}
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter UI var', sans-serif;
-  }
-}
-BUGS:
-- Safari 12.0 will default to italic instead of regular when font-weight
-  is provided in a @font-face declaration.
-  Workaround: Use "Inter UI var alt" for Safari, or explicitly set
-  `font-variation-settings:"slnt" DEGREE`.
-*/
-    @font-face {
-      font-family: 'Inter UI var';
-      font-weight: 100 900;
-      font-style: oblique 0deg 10deg;
-      src: url("font-files/Inter-UI.var.woff2?v=3.2") format("woff2-variations"),
-        url("font-files/Inter-UI.var.woff2?v=3.2") format("woff2");
-    }
-
-    /* --------------------------------------------------------------------------
-"Inter UI var alt" is recommended for Safari and Edge, for reliable italics.
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter UI var alt', sans-serif;
-  }
-}
-*/
-    @font-face {
-      font-family: 'Inter UI var alt';
-      font-weight: 100 900;
-      font-style: normal;
-      font-named-instance: 'Regular';
-      src: url("font-files/Inter-UI-upright.var.woff2?v=3.2") format("woff2 supports variations(gvar)"),
-        url("font-files/Inter-UI-upright.var.woff2?v=3.2") format("woff2-variations"),
-        url("font-files/Inter-UI-upright.var.woff2?v=3.2") format("woff2");
-    }
-
-    @font-face {
-      font-family: 'Inter UI var alt';
-      font-weight: 100 900;
-      font-style: italic;
-      font-named-instance: 'Italic';
-      src: url("font-files/Inter-UI-italic.var.woff2?v=3.2") format("woff2 supports variations(gvar)"),
-        url("font-files/Inter-UI-italic.var.woff2?v=3.2") format("woff2-variations"),
-        url("font-files/Inter-UI-italic.var.woff2?v=3.2") format("woff2");
-    }
-
-
-
-    /* start styling */
-
     @media print {
       html {
         font-size: 12px;
+      }
+
+      code {
+        font-size: 12px
       }
 
       .block {
@@ -219,101 +22,13 @@ BUGS:
         padding-bottom: 12px !important;
         padding-top: 12px !important;
       }
+
       footer {
         visibility: hidden;
+        height: 0;
+        padding: 0;
+        margin: 0;
       }
-    }
-
-    html {
-      font-family: "Inter UI", Helvetica, sans-serif;
-      /* font-family: 'Times New Roman', Times, serif; */
-      /* font-weight: 400; */
-    }
-
-    .flare {
-      color: rgb(67, 32, 239);
-    }
-
-    .block {
-      border-radius: 3px;
-      padding: 20px;
-      border: 1px solid rgb(231, 233, 235);
-    }
-
-    .block-title {
-      font-weight: 600;
-      padding-bottom: 20px;
-      padding-top: 20px;
-      font-size: .85rem;
-    }
-
-    .inner-block-title {
-      font-weight: 600;
-      font-size: .85rem;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .social>a:hover {
-      text-decoration: underline;
-    }
-
-    .block>.title {
-      font-weight: 600;
-    }
-
-    /* .grid > a:hover {
-      border: 1px solid rgb(197, 198, 199);
-    } */
-
-    .grid>a:hover>.title {
-      color: rgb(67, 32, 239);
-      /* text-decoration: underline; */
-    }
-
-    .grid {
-      display: grid;
-      grid-gap: 10px 10px;
-      align-content: space-evenly;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-
-    .bottom-grid {
-      display: grid;
-      grid-gap: 10px 10px;
-      align-content: space-evenly;
-      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-
-    }
-
-    .date {
-      font-weight: 500;
-    }
-
-    code {
-      background-color: rgba(67, 32, 239, .1);
-      padding: 0px 2px;
-      color: #000;
-    }
-
-    ul {
-      margin-block-start: .5em;
-      padding-left: 2em;
-      margin-bottom: 0px;
-      margin-block-end: 0px;
-      padding-bottom: 0px;
-    }
-
-    footer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin: 40px 0px 15px 0px;
-      padding-top: 5px;
-      border-top: 1px solid rgb(231, 233, 235);
     }
 
     @media only screen and (max-width: 450px) {
@@ -321,12 +36,6 @@ BUGS:
         display: inline-block;
         width: 100%;
       }
-    }
-
-    h1,
-    div {
-      padding: 0;
-      margin: 0;
     }
   </style>
 </head>
@@ -339,47 +48,46 @@ BUGS:
     <a target="_blank" rel="noopener noreferrer" href="https://dillon.ml">dillon.ml</a>
   </div>
   <p id="bio">
-    Software Engineer specializing in Full Stack Javascript <code>React</code>, <code>React Native</code>, <code>Redux</code>,
+    Software Engineer specializing in Full Stack Javascript with <code>React</code>, <code>React Native</code>, <code>Redux</code>,
     <code>Node.js</code>.
   </p>
   <div class="block-title">SELECTED PROJECTS</div>
-  <div class="grid">
+  <div class="grid two-col-grid">
     <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon/monitor" class="block">
       <span class="title">Monitor</span> <span class="flare date">2018</span></strong><br>
-      <code>React Native</code> mobile app to keep track of your Ethereum wallet's transactions and balances with
-      push
-      notifications. Uses <code>Firebase</code> cloud messaging, cloud functions, user authentication realtime
+      <code>React Native</code> mobile app that keeps track of Ethereum wallet balances and transactions with
+      push notifications. Uses <code>Firebase</code> cloud messaging, cloud functions, user auth, realtime
       database,
-      and more for the backend. In beta via Testflight.
+      and more. In beta via Testflight.
     </a>
     <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon/guncontrolgrades_midterms" class="block">
       <span class="title">GunControlGrades.org</span> <span class="flare date">2018</span></strong><br>
-      <code>React</code> web app enabling users to create a personalized voting card for the 2018 midterm elections
-      based on their stance on gun control. Made for Jonathan Horowitz and Downtown For Democracy.
+      <code>React</code> web app allowing users to create a personalized voting card for the 2018 midterm elections
+      based on their state candidates' stances on gun control. Made for Jonathan Horowitz and Downtown For Democracy.
     </a>
   </div>
   <div class="block-title">SELECTED EXPERIENCE</div>
-  <div class="grid">
+  <div class="grid two-col-grid">
     <div class="block">
       <span class="title">Artist Assistant, Jonathan Horowitz</span> <span class="flare date">2017-Present</span></strong><br>
       2D and 3D image post-production; book and web design; software development.
     </div>
     <div class="block">
       <span class="title">Marketing Coordinator, VFILES</span> <span class="flare date">2016-2017</span></strong><br>
-      Managed production, release, and analytics for media across all communication platforms.
+      Managed production, release, and analytics for media across all digital communication platforms.
     </div>
     <div class="block">
       <span class="title">Digital Preservation Fellow, Rhizome</span> <span class="flare date">2016</span><br>
-      Audited web-based artworks for re-staging in the Net Art Anthology. Archived platform-based artworks and
-      digital
-      museums with Rhizome's Webrecorder software.
+      Audited archived web-based works for re-staging in the Net Art Anthology. Archived new platform-based artworks
+      and
+      digital museums with Rhizome's Webrecorder software. Wrote about the history of open source and art on the web.
     </div>
   </div>
   <div class="block-title">EDUCATION</div>
-  <div class="grid">
+  <div class="grid two-col-grid">
     <div class="block">
       <span class="title">New York University, Gallatin</span> <span class="flare date">2012-2016</span><br>
-      B.A. Individualized major concentrating in contemporary and digital art history and theory.
+      B.A. Individualized major concentrating in contemporary and digital art history and critical theory.
     </div>
     <a target="_blank" rel="noopener noreferrer" href="https://www.freecodecamp.org/dillon" class="block">
       <span class="title">FreeCodeCamp</span> <span class="flare date">2018</span><br>
@@ -388,16 +96,17 @@ BUGS:
     <a target="_blank" rel="noopener noreferrer" href="https://courses.edx.org/certificates/870f5805a22246a08b066fe64fb4d802"
       class="block">
       <span class="title">Harvard CS50: Introduction to Computer Science</span> <span class="flare date">2018</span><br>
-      Computer science fundamentals in <code>C</code>, <code>Python</code>, <code>SQL</code>, <code>Javascript</code>
+      Algorithms & data structures, resource management, security, and web development in <code>C</code>, <code>Python</code>,
+      <code>SQL</code>, <code>Javascript</code>
       and more.
     </a>
     <div class="block">
-      <span class="title">Harvard CS50 Mobile App Development with React Native</span> <span class="flare date">2018</span><br>
-      <code>React Native</code>, <code>Redux</code>, debugging, testing for mobile.
+      <span class="title">Harvard CS50 Mobile App Dev. with React Native</span> <span class="flare date">2018</span><br>
+      <code>React Native</code> and <code>Redux</code>; debugging and testing for mobile with <code>Chai</code>.
     </div>
   </div>
   <div class="block-title">SKILLS</div>
-  <div class="bottom-grid">
+  <div class="grid three-col-grid">
     <div class="block">
       <div class="inner-block-title">GENERAL</div>
       <ul>
@@ -421,7 +130,7 @@ BUGS:
     <div class="block">
       <div class="inner-block-title">BACK END</div>
       <ul>
-        <li>NodeJS <code>confident</code></li>
+        <li>Node.js <code>expert</code></li>
         <li>RESTful API <code>confident</code></li>
         <li>Firebase <code>confident</code></li>
         <li>Heroku <code>familiar</code></li>
@@ -436,6 +145,7 @@ BUGS:
         <li>VS Code <code>expert</code></li>
         <li>Adobe Suite <code>expert</code></li>
         <li>XCode <code>beginner</code></li>
+        <li>Beaker & dat:// <code>beginner</code></li>
       </ul>
     </div>
     <div class="block">

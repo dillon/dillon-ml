@@ -1,0 +1,105 @@
+html {
+  font-family: "Inter UI", Helvetica, sans-serif;
+}
+
+body {
+  max-width:800px;
+}
+
+.flare {
+  color: rgb(67, 32, 239);
+}
+
+.block {
+  border-radius: 3px;
+  padding: 20px;
+  border: 1px solid rgb(231, 233, 235);
+}
+
+.block-title {
+  font-weight: 600;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: .85rem;
+}
+
+.inner-block-title {
+  font-weight: 600;
+  font-size: .85rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.social>a:hover {
+  text-decoration: underline;
+  /* background-color: rgba(100,100,100,.08) */
+}
+
+.block>.title {
+  font-weight: 600;
+}
+
+.grid>a:hover {
+  border: 1px solid rgb(184, 184, 184)
+    /* rgb(197, 198, 199); */
+}
+
+.grid>a:hover>.title {
+  color: rgb(67, 32, 239);
+  /* text-decoration: underline; */
+}
+
+.grid {
+  display: grid;
+  grid-gap: 10px 10px;
+  align-content: space-evenly;
+}
+
+.two-col-grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.three-col-grid {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+
+.date {
+  font-weight: 500;
+}
+
+code {
+  background-color: rgba(67, 32, 239, .1);
+  padding: 0px 2px;
+  color: #000;
+  font-size: 14px;
+}
+
+ul {
+  margin-block-start: .5em;
+  padding-left: 2em;
+  margin-bottom: 0px;
+  margin-block-end: 0px;
+  padding-bottom: 0px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px 0px 15px 0px;
+  padding-top: 5px;
+  border-top: 1px solid rgb(231, 233, 235);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+div {
+  padding: 0;
+  margin: 0;
+}
