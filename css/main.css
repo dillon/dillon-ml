@@ -1,11 +1,21 @@
 html {
   font-family: "Inter UI", Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 body {
   padding: 10px;
-  max-width:800px;
+  max-width: 800px;
   margin: auto;
+}
+
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  
 }
 
 #bio {
@@ -16,12 +26,19 @@ body {
   font-size: 1em
 }
 
+.underline {
+  /* border-bottom: 1px solid black; */
+  text-decoration: underline;
+}
+
 .link-arrow {
   visibility: hidden;
+  text-decoration: none;
 }
 
 a:hover .link-arrow {
   visibility: visible;
+  text-decoration: none;
 }
 
 .flare {
@@ -34,10 +51,21 @@ a:hover .link-arrow {
   border: 1px solid rgb(231, 233, 235);
 }
 
+.link-list {
+  padding-left: 10px;
+  line-height: 1.75em;
+}
 
 .block-title {
   font-weight: 600;
   padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: .85rem;
+}
+
+.link-list-title {
+  font-weight: 600;
+  padding-bottom: 10px;
   padding-top: 20px;
   font-size: .85rem;
 }
@@ -57,16 +85,20 @@ a {
   /* background-color: rgba(100,100,100,.08) */
 }
 
-.block>.title {
+.hover-flare:hover {
+  color: rgb(67, 32, 239);
+}
+
+.title {
   font-weight: 600;
 }
 
 .grid>a:hover {
   border: 1px solid rgb(184, 184, 184)
-    /* rgb(197, 198, 199); */
+  /* rgb(197, 198, 199); */
 }
 
-.grid>a:hover>.title {
+a:hover>.title {
   color: rgb(67, 32, 239);
   /* text-decoration: underline; */
 }
