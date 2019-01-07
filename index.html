@@ -10,13 +10,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Dillon Petito</title>
   <style>
-    /* html {
+    html {
       background-image: url('images/manga.png');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
-    } */
+      background-image: none;
+    }
   </style>
+  <script>
+    document.onkeypress = function (e) {
+      e = e || window.event;
+      // use e.keyCode
+      if (e.key === 'm' || e.keyCode === 77) {
+        document.body.style.backgroundImage = "url('images/manga.png')"
+      }
+    };
+    document.onkeyup = function (e) {
+      e = e || window.event;
+      if (e.key === 'm' || e.keyCode === 77) {
+        document.body.style.backgroundImage = 'none';
+      }
+    }
+
+  </script>
 </head>
 
 <body>
