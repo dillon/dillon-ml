@@ -15,7 +15,6 @@ img {
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
-  
 }
 
 #bio {
@@ -32,13 +31,25 @@ img {
 }
 
 .link-arrow {
-  visibility: hidden;
+  display: none;
   text-decoration: none;
 }
 
-a:hover .link-arrow {
-  visibility: visible;
+.block .link-arrow {
+  display: inline-block;
   text-decoration: none;
+}
+
+@media (pointer: fine) {
+  .link-arrow, .block .link-arrow {
+    display: none;
+    text-decoration: none;
+    z-index: -1;
+  }
+  a:hover .link-arrow {
+    display: inline-block;
+    text-decoration: none;
+  }
 }
 
 .flare {
