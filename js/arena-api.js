@@ -1,7 +1,7 @@
 const CHANNEL_URL = 'im-currently-reading'
 const QUERIES = '?total_pages=1&per=5'
 
-const fullUrl = `http://api.are.na/v2/channels/${CHANNEL_URL}/contents${QUERIES}`
+const fullUrl = `https://api.are.na/v2/channels/${CHANNEL_URL}/contents${QUERIES}`
 const xhr = new XMLHttpRequest();
 
 function addArticle(articleTitle, articleUrl, list) {
