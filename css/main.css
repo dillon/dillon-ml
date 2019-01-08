@@ -72,6 +72,10 @@ img {
   }
 }
 
+body {
+  -webkit-text-size-adjust: none;
+}
+
 .flare {
   color: rgb(67, 32, 239);
 }
@@ -168,7 +172,7 @@ a:hover>.title {
 
 footer>.block-text {
   max-width: 220px;
-  padding-top:5px;
+  padding-top: 5px;
 }
 
 .date {
