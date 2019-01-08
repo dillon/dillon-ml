@@ -1,0 +1,1 @@
+Dillon Petito is a software engineer specializing in full stack Javascript with React, React Native, Redux, and Nodejs. He also writes about art and technology and is currently based in New York City.

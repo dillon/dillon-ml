@@ -17,6 +17,10 @@ img {
   user-select: none;
 }
 
+.icon {
+  margin-bottom: 10px;
+}
+
 .dotted-header {
   position: absolute;
   z-index: -1;
@@ -35,6 +39,11 @@ img {
   font-size: 1em
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 .underline {
   /* border-bottom: 1px solid black; */
   text-decoration: underline;
@@ -51,7 +60,8 @@ img {
 }
 
 @media (pointer: fine) {
-  .link-arrow, .block .link-arrow {
+  .link-arrow,
+  .block .link-arrow {
     display: none;
     text-decoration: none;
     z-index: -1;
@@ -75,6 +85,17 @@ img {
 .link-list {
   padding-left: 10px;
   line-height: 1.75em;
+}
+
+.link-list>div {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.link-list>div>img,
+.link-list>div>span {
+  padding-right: 4px;
 }
 
 .block-title {
@@ -126,16 +147,28 @@ a:hover>.title {
 
 .grid {
   display: grid;
-  grid-gap: 10px 10px;
   align-content: space-evenly;
 }
 
-.two-col-grid {
+.grid-small-gap {
+  grid-gap: 10px 10px;
+}
+
+.grid-large-gap {
+  grid-gap: 20px 20px;
+}
+
+.grid-two-col {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-.three-col-grid {
+.grid-three-col {
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+
+footer>.block-text {
+  max-width: 220px;
+  padding-top:5px;
 }
 
 .date {
