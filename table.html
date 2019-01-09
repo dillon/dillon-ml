@@ -18,6 +18,7 @@
     .grid {
       border: none;
     }
+
     body {
       max-width: none;
     }
@@ -78,17 +79,19 @@
       margin: 5px;
       border: 1px solid #666;
     }
-    
+
     table tbody tr {
-    /* background-color: rgba(240, 240, 240, .92); */
-    transition: 100ms;
+      /* background-color: rgba(240, 240, 240, .92); */
+      transition: 100ms;
     }
 
     /* table tbody tr:nth-child(2n) {
       background-color: rgba(210, 210, 210, .92);
     } */
 
-    #date-column, #name-column, #description-column {
+    #date-column,
+    #name-column,
+    #description-column {
       cursor: pointer;
     }
 
@@ -103,28 +106,28 @@
 
     #show-hidden-files {
       font-weight: normal;
-      font-size:.9rem;
+      font-size: .9rem;
       color: #333;
     }
 
     #filter-container>#replace-text {
-      font-weight:normal;
-      opacity:.6;
-      font-size:.9em;
+      font-weight: normal;
+      opacity: .6;
+      font-size: .9em;
     }
 
     .tag {
-      background-color: rgba(180,180,180,.3);
+      background-color: rgba(180, 180, 180, .3);
       border: 1px solid #666;
       border-radius: 5px;
       padding: 3px 5px;
-      display:inline-block;
+      display: inline-block;
       margin: 1px;
       transition: 100ms;
       cursor: pointer;
       color: black;
       font-weight: normal;
-      font-size:.9em;
+      font-size: .9em;
     }
 
     .tag:hover {
@@ -132,30 +135,97 @@
       transition: 100ms;
     }
 
-    .Swift { background-color: rgba(255, 172, 69, .3); }
-    .C { background-color: rgba(60, 106, 242, 0.3); }
-    .Javascript{ background-color: rgba(241, 224, 90, .3); }
-    .d3 { background-color: rgba(246,156,77,.3); }
-    .jQuery { background-color: rgba(19,102,164,.3); }
-    .Python { background-color: rgba(53, 114, 165, .3); }
-    .react-native { background-color: rgba(180,140,240,.3); }
-    .Firebase { background-color: rgba(253,165,45,.3); }
-    .react { background-color: rgba(36,209,245,.3); }
-    .cs50 { background-color: rgba(199,8,32,.3); }
-    .cs50-mobile { background-color: rgba(150,8,62,.3); }
-    .react-router { background-color: rgba(140,140,140,.3); }
-    .freelance { background-color: rgba(140,240,140,.3); }
-    .RESTful-API { background-color: rgba(142,196,73, .3); }
-    .mongodb { background-color: rgba(232,136,34,0.3); }
-    .freecodecamp { background-color: rgba(9,99,12, .3); }
-    .helmetjs { background-color: rgba(223,72,203, .3); }
-    .SQLite { background-color: rgba(52,54,168, .3); }
-    .nodejs { background-color: rgba(140,189,71,.3); }
-    .flask { background-color: rgba(180,180,180,.3); }
-    .redux { background-color: rgba(114, 56, 213, 0.3); }
-    .sass { background-color: rgba(255, 115, 185, 0.3); }
-    .express { background-color: rgba(43, 140, 220, 0.3); }
+    .Swift {
+      background-color: rgba(255, 172, 69, .3);
+    }
 
+    .C {
+      background-color: rgba(60, 106, 242, 0.3);
+    }
+
+    .Javascript {
+      background-color: rgba(241, 224, 90, .3);
+    }
+
+    .d3 {
+      background-color: rgba(246, 156, 77, .3);
+    }
+
+    .jQuery {
+      background-color: rgba(19, 102, 164, .3);
+    }
+
+    .Python {
+      background-color: rgba(53, 114, 165, .3);
+    }
+
+    .react-native {
+      background-color: rgba(180, 140, 240, .3);
+    }
+
+    .Firebase {
+      background-color: rgba(253, 165, 45, .3);
+    }
+
+    .react {
+      background-color: rgba(36, 209, 245, .3);
+    }
+
+    .cs50 {
+      background-color: rgba(199, 8, 32, .3);
+    }
+
+    .cs50-mobile {
+      background-color: rgba(150, 8, 62, .3);
+    }
+
+    .react-router {
+      background-color: rgba(140, 140, 140, .3);
+    }
+
+    .freelance {
+      background-color: rgba(140, 240, 140, .3);
+    }
+
+    .RESTful-API {
+      background-color: rgba(142, 196, 73, .3);
+    }
+
+    .mongodb {
+      background-color: rgba(232, 136, 34, 0.3);
+    }
+
+    .freecodecamp {
+      background-color: rgba(9, 99, 12, .3);
+    }
+
+    .helmetjs {
+      background-color: rgba(223, 72, 203, .3);
+    }
+
+    .SQLite {
+      background-color: rgba(52, 54, 168, .3);
+    }
+
+    .nodejs {
+      background-color: rgba(140, 189, 71, .3);
+    }
+
+    .flask {
+      background-color: rgba(180, 180, 180, .3);
+    }
+
+    .redux {
+      background-color: rgba(114, 56, 213, 0.3);
+    }
+
+    .sass {
+      background-color: rgba(255, 115, 185, 0.3);
+    }
+
+    .express {
+      background-color: rgba(43, 140, 220, 0.3);
+    }
   </style>
 </head>
 
@@ -415,16 +485,16 @@
       ]
 
     function handleCheckbox() {
-      const checkbox = document.getElementById('checkbox')
+      // const checkbox = document.getElementById('checkbox')
       let filter = document.getElementById('filter');
       if (filter) filter = filter.innerText
 
-      fillTable(checkbox.checked, filter);
+      fillTable(filter);
     }
 
-    window.onload = () => fillTable(false)
+    window.onload = () => fillTable()
 
-    function fillTable(showHidden, filterBy) {
+    function fillTable(filterBy) {
       const tbody = document.getElementById('projects')
       tbody.innerHTML = null;
 
@@ -436,8 +506,8 @@
         filter.id = 'filter'
         filter.innerHTML = filterBy
         filter.addEventListener('click', function () {
-          const checkbox = document.getElementById('checkbox')
-          fillTable(checkbox.checked, null)
+          // const checkbox = document.getElementById('checkbox')
+          fillTable(null)
         })
 
         document.getElementById('filter-container').innerHTML = '';
@@ -453,41 +523,40 @@
       const tableRows = projects.map((project) => {
         if (!filterBy || project.tags.includes(filterBy)) {
           // if (showHidden || project.show) {
-            const row = tbody.insertRow(0)
+          const row = tbody.insertRow(0)
 
-            const dateColumn = document.createElement('td')
-            dateColumn.innerHTML = project.date
-            dateColumn.id = 'date-column'
-            dateColumn.addEventListener('click', function () { window.open(project.link) });
-            row.appendChild(dateColumn)
+          const dateColumn = document.createElement('td')
+          dateColumn.innerHTML = project.date
+          dateColumn.id = 'date-column'
+          dateColumn.addEventListener('click', function () { window.open(project.link) });
+          row.appendChild(dateColumn)
 
-            const nameColumn = document.createElement('td')
-            nameColumn.innerHTML = project.name
-            nameColumn.id = 'name-column'
-            nameColumn.addEventListener('click', function () { window.open(project.link) });
-            row.appendChild(nameColumn)
+          const nameColumn = document.createElement('td')
+          nameColumn.innerHTML = project.name
+          nameColumn.id = 'name-column'
+          nameColumn.addEventListener('click', function () { window.open(project.link) });
+          row.appendChild(nameColumn)
 
-            const descriptionColumn = document.createElement('td')
-            descriptionColumn.innerHTML = project.description
-            descriptionColumn.id = 'description-column'
-            descriptionColumn.addEventListener('click', function () { window.open(project.link) });
-            row.appendChild(descriptionColumn)
+          const descriptionColumn = document.createElement('td')
+          descriptionColumn.innerHTML = project.description
+          descriptionColumn.id = 'description-column'
+          descriptionColumn.addEventListener('click', function () { window.open(project.link) });
+          row.appendChild(descriptionColumn)
 
-            const tagsColumn = document.createElement('td')
-            project.tags.map((tagText, index) => {
-              const tag = document.createElement('span')
-              tag.setAttribute('class', 'tag')
-              tag.classList.add(tagText)
-              tag.innerHTML = tagText;
-              tag.addEventListener('click', function () {
-                const checkboxVal = document.getElementById('checkbox')
-                fillTable(checkboxVal.checked, tagText)
-              })
-              tagsColumn.appendChild(tag)
-
-
+          const tagsColumn = document.createElement('td')
+          project.tags.map((tagText, index) => {
+            const tag = document.createElement('span')
+            tag.setAttribute('class', 'tag')
+            tag.classList.add(tagText)
+            tag.innerHTML = tagText;
+            tag.addEventListener('click', function () {
+              // const checkboxVal = document.getElementById('checkbox')
+              fillTable(tagText)
             })
-            row.appendChild(tagsColumn)
+            tagsColumn.appendChild(tag)
+
+          })
+          row.appendChild(tagsColumn)
           // }
         }
       });
