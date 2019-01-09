@@ -1,5 +1,6 @@
 const CHANNEL_URL = 'im-currently-reading'
-const QUERIES = '?total_pages=1&per=5'
+// const QUERIES = '?total_pages=1&per=5'
+const QUERIES = ''
 
 const fullUrl = `https://api.are.na/v2/channels/${CHANNEL_URL}/contents${QUERIES}`
 const xhr = new XMLHttpRequest();
@@ -53,7 +54,7 @@ window.onload = function loadXMLDoc() {
       reading.append(list)
 
       JSON.parse(xmlhttp.responseText)
-        .contents.reverse().map(x => addArticle(x.title, x.source.url, list))
+        .contents.reverse().slice(0, 4).map(x => addArticle(x.title, x.source.url, list))
     }
   };
 
