@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/dillon9
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://dillon.ml
+  * I am dillon9 (https://keybase.io/dillon9) on keybase.
+  * I have a public key ASDgj6V-3yyKTPYFqfXK8QA5WmN9iAhxSerFJVyILKF04go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e08fa57edf2c8a4cf605a9f5caf100395a637d88087149eac5255c882ca174e20a",
+      "host": "keybase.io",
+      "kid": "0120e08fa57edf2c8a4cf605a9f5caf100395a637d88087149eac5255c882ca174e20a",
+      "uid": "6b4cdf09eb4fa73afccf2a34ddfa0919",
+      "username": "dillon9"
+    },
+    "merkle_root": {
+      "ctime": 1547001569,
+      "hash": "c9a21a61432cc38d8caf672bcfbe797a109eaad6b97e967581d1516e33f33d07618c105afd00eea37ffe8e1e1b3cf41d0253e742b9f571b7cb2cc055fc217f0c",
+      "hash_meta": "5a9d3d6c2ca766340ffcbd250e5b505613f04886b2a32fce36a86049ffac3be0",
+      "seqno": 4256652
+    },
+    "service": {
+      "entropy": "GXR7BJKe0MUmSppRYL+ALZ6b",
+      "hostname": "dillon.ml",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.12.6"
+  },
+  "ctime": 1547001581,
+  "expire_in": 504576000,
+  "prev": "cd77589e220bda49c273c654c17c21125044e5120e812c680378381a14fffcbe",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg4I+lft8sikz2Ban1yvEAOVpjfYgIcUnqxSVciCyhdOIKp3BheWxvYWTESpcCBcQgzXdYniIL2knCc8ZUwXwhElBE5RIOgSxoA3g4GhT//L7EIA5b0eJI5Mf4OlANXEy4xIAbg+btzd0V4fAOUwyILuaCAgHCo3NpZ8RADCNx8LkLqYZsxcEW3ckfXOi47/a2cmpj1a8Xwk81AESBUWqaXwz94DFKbSfoNLQJ+rACn2obx2Dr5qfWioOjBqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIB6n72YETXgdzSDevdsLjHYoGEP+5lXtwl7/fpeFxKgfo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dillon9
+
+==================================================================
