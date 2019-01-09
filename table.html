@@ -452,7 +452,7 @@
 
       const tableRows = projects.map((project) => {
         if (!filterBy || project.tags.includes(filterBy)) {
-          if (showHidden || project.show) {
+          // if (showHidden || project.show) {
             const row = tbody.insertRow(0)
 
             const dateColumn = document.createElement('td')
@@ -488,7 +488,7 @@
 
             })
             row.appendChild(tagsColumn)
-          }
+          // }
         }
       });
     }
@@ -503,10 +503,10 @@
           <th>Name</th>
           <th class="grid grid-mini-two-col">
             Description
-            <div id="show-hidden-files">
+            <!-- <div id="show-hidden-files">
               <input id="checkbox" onclick="handleCheckbox()" type="checkbox" name="showHidden" value="showHidden">
               show all
-            </div>
+            </div> -->
           </th>
           <th id="tag-header">
             Tags
