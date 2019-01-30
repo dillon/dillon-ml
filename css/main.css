@@ -216,8 +216,9 @@ footer>.block-text {
 code {
   background-color: rgba(67, 32, 239, .1);
   padding: 0px 2px;
-  color: #000;
+  /* color: rgb(75, 75, 216); */
   font-size: 1em;
+  font-family: 'Consolas', monospace
 }
 
 ul {
