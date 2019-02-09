@@ -4,7 +4,7 @@ https://keybase.io/dillon9
 
 I hereby claim:
 
-  * I am an admin of https://dillon.ml
+  * I am an admin of https://dillon.global
   * I am dillon9 (https://keybase.io/dillon9) on keybase.
   * I have a public key ASDgj6V-3yyKTPYFqfXK8QA5WmN9iAhxSerFJVyILKF04go
 
@@ -27,7 +27,7 @@ To do so, I am signing this object:
     },
     "service": {
       "entropy": "GXR7BJKe0MUmSppRYL+ALZ6b",
-      "hostname": "dillon.ml",
+      "hostname": "dillon.global",
       "protocol": "https:"
     },
     "type": "web_service_binding",
