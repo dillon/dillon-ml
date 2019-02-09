@@ -4,7 +4,7 @@ https://keybase.io/dillon9
 
 I hereby claim:
 
-  * I am an admin of https://dillon.global
+  * I am an admin of http://dillon.global
   * I am dillon9 (https://keybase.io/dillon9) on keybase.
   * I have a public key ASDgj6V-3yyKTPYFqfXK8QA5WmN9iAhxSerFJVyILKF04go
 
@@ -20,33 +20,33 @@ To do so, I am signing this object:
       "username": "dillon9"
     },
     "merkle_root": {
-      "ctime": 1547001569,
-      "hash": "c9a21a61432cc38d8caf672bcfbe797a109eaad6b97e967581d1516e33f33d07618c105afd00eea37ffe8e1e1b3cf41d0253e742b9f571b7cb2cc055fc217f0c",
-      "hash_meta": "5a9d3d6c2ca766340ffcbd250e5b505613f04886b2a32fce36a86049ffac3be0",
-      "seqno": 4256652
+      "ctime": 1549749443,
+      "hash": "d80412f0fbb29dcaec3991e33836672246b9c135ad1afc034934e1789212fb96d769a3c33b6c68bb18f3550e924cf698e3e9b2e7a1950184b8f87601a692e31a",
+      "hash_meta": "f119dc1a775e145ae572b01a036cb84e8b7350acb964fd83429277ae9b48b7a8",
+      "seqno": 4733998
     },
     "service": {
-      "entropy": "GXR7BJKe0MUmSppRYL+ALZ6b",
+      "entropy": "/+thQ+pBWh5FpZJO/5bliROJ",
       "hostname": "dillon.global",
-      "protocol": "https:"
+      "protocol": "http:"
     },
     "type": "web_service_binding",
     "version": 2
   },
   "client": {
     "name": "keybase.io go client",
-    "version": "2.12.6"
+    "version": "3.0.0"
   },
-  "ctime": 1547001581,
+  "ctime": 1549749459,
   "expire_in": 504576000,
-  "prev": "cd77589e220bda49c273c654c17c21125044e5120e812c680378381a14fffcbe",
-  "seqno": 5,
+  "prev": "04cfbae8e2e6c5f5868f9a1bbc81598a4e53b7cb1b9b85d774e2c86935c22f33",
+  "seqno": 22,
   "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg4I+lft8sikz2Ban1yvEAOVpjfYgIcUnqxSVciCyhdOIKp3BheWxvYWTESpcCBcQgzXdYniIL2knCc8ZUwXwhElBE5RIOgSxoA3g4GhT//L7EIA5b0eJI5Mf4OlANXEy4xIAbg+btzd0V4fAOUwyILuaCAgHCo3NpZ8RADCNx8LkLqYZsxcEW3ckfXOi47/a2cmpj1a8Xwk81AESBUWqaXwz94DFKbSfoNLQJ+rACn2obx2Dr5qfWioOjBqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIB6n72YETXgdzSDevdsLjHYoGEP+5lXtwl7/fpeFxKgfo3RhZ80CAqd2ZXJzaW9uAQ==
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg4I+lft8sikz2Ban1yvEAOVpjfYgIcUnqxSVciCyhdOIKp3BheWxvYWTESpcCFsQgBM+66OLmxfWGj5obvIFZik5Tt8sbm4XXdOLIaTXCLzPEIMtZR/0eUbIFvAWxnExoJk5Dy7bWHfF1BXxlALaOPS7dAgHCo3NpZ8RA23Qik2OPgHVn2RokWLC4XSzIVi3Y7uNOPlBGWf9fnEdBwwEqCQxDbsaAGybfgsTmTZ1V95W1lA9s7JL6DAJsAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIBdRFxQjq8bx4SZeF3QXKK5GDXQuQTUOx9ZwlIre3Jtlo3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
