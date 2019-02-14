@@ -229,6 +229,10 @@ ul {
   padding-bottom: 0px;
 }
 
+header {
+  padding-bottom:10px;
+}
+
 footer {
   display: flex;
   flex-direction: row;

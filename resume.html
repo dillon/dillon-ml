@@ -3,14 +3,14 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link rel="shortcut icon" href="images/icon/ubtwww_solid_round.png">
   <link rel="stylesheet" href="font-files/inter-ui.css">
   <link rel="stylesheet" href="css/main.css">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132442836-1"></script>
   <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-132442836-1'); </script>
-  
+
   <title>Dillon Petito / Resume</title>
   <style>
     @media print {
@@ -35,7 +35,17 @@
         display: none;
       }
 
+      header {
+        padding-bottom:0px;
+      }
+
       footer {
+        visibility: hidden;
+        height: 0;
+        padding: 0;
+        margin: 0;
+      }
+      form {
         visibility: hidden;
         height: 0;
         padding: 0;
@@ -55,16 +65,23 @@
 <body>
   <main>
     <header>
-      <h1>Dillon Petito</h1>
+      <div class="row" style="align-items: center;justify-content:space-between">
+        <h1>Dillon Petito</h1>
+      </div>
       <div class="flare social">
-        <a target="_blank" rel="noopener noreferrer" href="mailto:dillonpetito@gmail.com">dillonpetito@gmail.com</a><br />
+        <a target="_blank" rel="noopener noreferrer"
+          href="mailto:dillonpetito@gmail.com">dillonpetito@gmail.com</a><br />
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon">github.com/dillon</a><br />
-        <a href="https://dillon.global">dillon.global</a>
+        <a href="https://dillon.global">dillon.global</a><br />
       </div>
     </header>
     </div>
+    <form method="get" action="/files/Dillon_Petito_Resume.pdf">
+      <button tyle="submit">Download</button>
+    </form>
     <p id="bio">
-      Software Engineer specializing in Full Stack Javascript with <code>React</code>, <code>React Native</code>, and <code>Node.js</code>.
+      Software Engineer specializing in Full Stack Javascript with <code>React</code>, <code>React Native</code>, and
+      <code>Node.js</code>.
     </p>
     <div class="block-title">RECENT PROJECTS
       <a href="/projects" class="hover-flare underline" id="show-all-projects">
@@ -73,7 +90,8 @@
       </a></div>
 
     <div class="grid grid-small-gap grid-two-col">
-      <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon/monitor#-monitor---ethereum-tracker" class="block">
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon/monitor#-monitor---ethereum-tracker"
+        class="block">
         <span class="title">Monitor</span> <span class="flare date">2018</span>
         <span class="link-arrow flare">&rarr;</span>
         <br>
@@ -82,7 +100,8 @@
         database,
         and more. In beta via Testflight.
       </a>
-      <a target="_blank" rel="noopener noreferrer" href="https://github.com/dillon/guncontrolgrades_midterms#gun-control-grades" class="block">
+      <a target="_blank" rel="noopener noreferrer"
+        href="https://github.com/dillon/guncontrolgrades_midterms#gun-control-grades" class="block">
         <span class="title">GunControlGrades.org</span> <span class="flare date">2018</span>
         <span class="link-arrow flare">&rarr;</span>
         <br>
@@ -125,7 +144,8 @@
         <span class="title">Harvard CS50: Introduction to Computer Science</span> <span class="flare date">2018</span>
         <span class="link-arrow flare">&rarr;</span>
         <br>
-        Algorithms & data structures, resource management, security, and web development in <code>C</code>, <code>Python</code>,
+        Algorithms & data structures, resource management, security, and web development in <code>C</code>,
+        <code>Python</code>,
         <code>SQL</code>, <code>Javascript</code>
         and more.
       </a>
