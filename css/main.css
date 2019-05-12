@@ -231,6 +231,9 @@ ul {
 
 header {
   padding-bottom: 10px;
+}
+
+header #spacer {
   height: 50px;
 }
 
