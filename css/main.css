@@ -9,6 +9,10 @@ body {
   margin: auto;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 a:focus,
 svg:focus,
 path:focus,
@@ -213,7 +217,8 @@ footer > .block-text {
   font-weight: 500;
 }
 
-code {
+code,
+.code {
   background-color: rgba(67, 32, 239, 0.1);
   padding: 0px 2px;
   /* color: rgb(75, 75, 216); */
