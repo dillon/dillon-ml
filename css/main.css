@@ -78,12 +78,14 @@ img {
 }
 
 @media (pointer: fine) {
+
   .link-arrow,
   .block .link-arrow {
     display: none;
     text-decoration: none;
     z-index: -1;
   }
+
   a:hover .link-arrow {
     display: inline-block;
     text-decoration: none;
@@ -114,18 +116,18 @@ body {
   line-height: 1.75em;
 }
 
-footer > .link-list {
+footer>.link-list {
   line-height: 1.65em;
 }
 
-.link-list > div {
+.link-list>div {
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
 
-.link-list > div > img,
-.link-list > div > span {
+.link-list>div>img,
+.link-list>div>span {
   padding-right: 4px;
 }
 
@@ -153,7 +155,7 @@ a {
   text-decoration: none;
 }
 
-.social > a:hover {
+.social>a:hover {
   text-decoration: underline;
   /* background-color: rgba(100,100,100,.08) */
 }
@@ -166,12 +168,12 @@ a {
   font-weight: 600;
 }
 
-.grid > a:hover {
+.grid>a:hover {
   border: 1px solid rgb(184, 184, 184);
   /* rgb(197, 198, 199); */
 }
 
-.grid > a:hover #show-all-projects {
+.grid>a:hover #show-all-projects {
   border: none;
 }
 
@@ -179,7 +181,7 @@ a {
   border: none;
 }
 
-a:hover > .title {
+a:hover>.title {
   color: rgb(67, 32, 239);
   /* text-decoration: underline; */
 }
@@ -209,7 +211,7 @@ a:hover > .title {
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
 }
 
-footer > .block-text {
+footer>.block-text {
   max-width: 215px;
   padding-top: 5px;
   line-height: 1.3;
