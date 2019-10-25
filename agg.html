@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="js/secret.js"></script>
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    a,
+    a:visited {
+      color: black;
+    }
+
+    div {
+      padding: 4px 0
+    }
+
+    button {
+      margin: 6px 0
+    }
+
+    p {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="main">
+  </main>
+  <button id="next-page">more</button>
+  <script>
+    const url = 'https://api.are.na/v2/channels/'
+    const slug = 'reading-njqjxcwzmp0';
+    const per = 25;
+
+    async function getContent(page) {
+      if (!page) return;
+      document.getElementById('next-page')
+        .innerHTML = '...loading'
+      fetch(url + slug + `?per=${per}&page=${page}`)
+        .then(res => res.json())
+        .then(data => {
+          data.contents.reverse().forEach(item => {
+            const div = document.createElement('div')
+            const a = document.createElement('a')
+            a.innerText = item.title || (item.source && item.source.url)
+            if (!a.innerText) {
+              a.innerText = item.content.slice(0, 100).replace('\n', '') + '...'
+            }
+
+            a.href = (item.source && item.source.url) || 'https://are.na/block/' + item.id
+            a.rel = 'noopener noreferrer'
+            a.target = '_blank'
+            div.appendChild(a)
+            document.getElementById("main").appendChild(div)
+            document.getElementById('next-page')
+              .innerHTML = 'more'
+          })
+        })
+    }
+    window.onload = async function getMeta() {
+      document.getElementById('next-page')
+        .innerHTML = '...loading'
+      document.getElementById('next-page').addEventListener('click', function () {
+        window.page -= 1
+        getContent(window.page)
+      })
+      fetch(url + slug + '?per=1')
+        .then(res => res.json())
+        .then(data => {
+          const page = Math.ceil(data.length / per)
+          window.page = page;
+          getContent(page, true)
+        })
+    }
+  </script>
+</body>
+
+</html>
