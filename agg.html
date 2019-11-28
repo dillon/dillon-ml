@@ -4,12 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="noindex">
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="js/secret.js"></script>
   <style>
     body {
       padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: .9em;
+      word-wrap: break-word;
+    }
+
+    main {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, 300px);
+      align-items: flex-start;
+      justify-items: flex-start;
     }
 
     a,
@@ -17,53 +29,99 @@
       color: black;
     }
 
+
+
     div {
-      padding: 4px 0
+      padding: 4px 0;
+      max-width: 300px;
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+      border: 1px solid lightgray;
+      box-shadow: 0px 0px 15px slategrey;
     }
 
     button {
-      margin: 6px 0
+      height: 300px;
+      width: 300px;
+      font-size: 1rem;
     }
 
     p {
       padding-top: 0;
       margin-top: 0;
     }
+
+    .text-div {
+      height: 40px;
+      overflow: hidden;
+    }
   </style>
 </head>
 
 <body>
   <main id="main">
+    <button id="next-page">more</button>
   </main>
-  <button id="next-page">more</button>
   <script>
     const url = 'https://api.are.na/v2/channels/'
     const slug = 'reading-njqjxcwzmp0';
     const per = 25;
 
-    async function getContent(page) {
+    async function getContent(page, callback) {
       if (!page) return;
       document.getElementById('next-page')
         .innerHTML = '...loading'
       fetch(url + slug + `?per=${per}&page=${page}`)
         .then(res => res.json())
         .then(data => {
+          const button = document.getElementById('next-page')
+          document.getElementById('main').innerHTML = ''
           data.contents.reverse().forEach(item => {
             const div = document.createElement('div')
             const a = document.createElement('a')
-            a.innerText = item.title || (item.source && item.source.url)
-            if (!a.innerText) {
-              a.innerText = item.content.slice(0, 100).replace('\n', '') + '...'
+            const img = document.createElement('img')
+            const textDiv = document.createElement('div')
+            let text = innerText = item.title || (item.source && item.source.url)
+            if (!text) {
+              text = item.content
             }
-
+            if (text.length > 80) text = text.slice(0, 77).replace('\n', '') + '...'
+            textDiv.innerHTML = text
+            textDiv.className = 'text-div'
             a.href = (item.source && item.source.url) || 'https://are.na/block/' + item.id
             a.rel = 'noopener noreferrer'
             a.target = '_blank'
+
+            const placeholderImage =
+              'https://d2w9rnfcy7mm78.cloudfront.net/427729/large_f953de573461d520e4a7689b6a35df9c.jpg'
+            img.src = (item.image && item.image.display && item.image.display.url) || placeholderImage
+            img.style.cssText =
+              `border-radius: ${randomRadius()} ${randomRadius()} ${randomRadius()} ${randomRadius()};`
+
+
+            const source = item.source && item.source.url.slice(0, 77).replace('\n', '') + '...'
+
+            a.addEventListener('mouseover', function () {
+              textDiv.innerHTML = source
+            }, false)
+
+            a.addEventListener('mouseout', function () {
+              textDiv.innerHTML = text
+            }, false)
+
+            a.appendChild(img)
+            a.appendChild(textDiv)
             div.appendChild(a)
-            document.getElementById("main").appendChild(div)
-            document.getElementById('next-page')
-              .innerHTML = 'more'
+            document.getElementById("main").append(div)
           })
+          document.getElementById('main').append(button)
+          button.innerHTML = 'next'
+          button.style.cssText =
+            `border-radius: ${randomRadius()} ${randomRadius()} ${randomRadius()} ${randomRadius()};`
+          window.scroll(0, 0)
         })
     }
     window.onload = async function getMeta() {
@@ -78,8 +136,12 @@
         .then(data => {
           const page = Math.ceil(data.length / per)
           window.page = page;
-          getContent(page, true)
+          let length = getContent(page)
         })
+    }
+
+    function randomRadius() {
+      return Math.floor(Math.random() * 100) + 20 + '%'
     }
   </script>
 </body>
